@@ -2,8 +2,19 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>婚礼邀请函</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>MM和LL的婚礼邀请函</title>
+
+  <meta name="description" content="MM和LL诚邀您参加我们的婚礼，见证我们的幸福时刻。"/>
+  <meta name="theme-color" content="#c08a2b"/>
+
+  <!-- 通用分享信息 -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="MM和LL的婚礼邀请函"/>
+  <meta property="og:description" content="诚邀您参加MM和LL的婚礼，见证我们的幸福时刻。"/>
+  <meta property="og:image" content="https://你的域名/images/share-cover.jpg"/>
+  <meta property="og:url" content="https://你的域名/"/>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
@@ -11,6 +22,7 @@
   <!-- 背景特效 -->
   <canvas id="fireworks"></canvas>
   <canvas id="hearts"></canvas>
+
   <!-- 音乐按钮 -->
   <div class="music-btn" id="musicBtn">♫</div>
   <audio id="bgm" loop>
@@ -23,7 +35,7 @@
       <div class="swiper-slide page cover-page">
         <div class="cover-text">
           <h1 class="xi">囍</h1>
-          <h2>苗苗 ❤️ 龙龙</h2>
+          <h2>MM ❤️ LL</h2>
           <p>诚邀您参加我们的婚礼</p>
           <p>2026年4月26日</p>
           <p class="tip">向上滑动开启邀请函</p>
@@ -40,6 +52,7 @@
           </div>
         </div>
       </div>
+
       <!-- 故事页2 -->
       <div class="swiper-slide page story-page">
         <div class="story-card">
@@ -50,6 +63,7 @@
           </div>
         </div>
       </div>
+
       <!-- 故事页3 -->
       <div class="swiper-slide page story-page">
         <div class="story-card">
@@ -60,6 +74,7 @@
           </div>
         </div>
       </div>
+
       <!-- 故事页4 -->
       <div class="swiper-slide page story-page">
         <div class="story-card">
@@ -75,10 +90,15 @@
       <div class="swiper-slide page location-page">
         <div class="location-card">
           <h2>婚礼地点</h2>
-          <div class="location-name">世纪金源大饭店</div>
-          <div class="location-address">重庆市两江新区观音桥街道世纪金源大饭店</div>
+          <div class="location-name">重庆世纪金源大饭店</div>
+          <div class="location-address">重庆市江北区建新北路二支路1号</div>
           <div class="location-actions">
-            <a class="map-btn" href="https://uri.amap.com/navigation?to=106.530000,29.608000,世纪金源大饭店&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=1">打开高德导航</a>
+            <a
+              class="map-btn"
+              href="https://uri.amap.com/search?keyword=重庆世纪金源大饭店 观音桥 江北区 建新北路二支路1号&city=重庆&view=map&src=mypage&callnative=1"
+            >
+              打开高德导航
+            </a>
           </div>
           <p class="location-tip">如微信内无法直接跳转，可点击后选择在浏览器中打开。</p>
         </div>
@@ -88,11 +108,7 @@
       <div class="swiper-slide page form-page">
         <div class="form-box">
           <h2>婚礼回执</h2>
-
-          <!-- ⭐ 以下 <form> 的 action 替换为你的 Formspree 表单 ID -->
-          <form id="guestForm"
-                action="https://formspree.io/f/mjgpbdqe"
-                method="POST">
+          <form id="guestForm" action="https://formspree.io/f/mjgpbdqe" method="POST">
             <input type="text" name="name" placeholder="姓名" required />
             <input type="tel" name="phone" placeholder="电话" required />
             <input type="number" name="people" placeholder="参加人数" min="1" />
@@ -110,10 +126,11 @@
           <div id="result"></div>
         </div>
       </div>
-
     </div>
   </div>
 
+  <!-- 微信 JSSDK -->
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
