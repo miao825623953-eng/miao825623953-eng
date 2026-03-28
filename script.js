@@ -253,11 +253,11 @@ if (form) {
 
       if (!response.ok) throw new Error("Failed.");
 
-      resultDiv.innerHTML = "<p style='color:green;'>Successful！！！</p>";
+      resultDiv.innerHTML = "<p style='color:green;'>提交成功</p>";
       form.reset();
     } catch (err) {
       console.error(err);
-      resultDiv.innerHTML = "<p style='color:red;'>Failed.</p>";
+      resultDiv.innerHTML = "<p style='color:red;'>提交失败</p>";
     }
 
     btn.disabled = false;
